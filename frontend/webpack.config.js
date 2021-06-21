@@ -16,15 +16,14 @@ module.exports = {
       {
         test: /\.js|.jsx/,
         loader: 'babel-loader',
-        exlude: /node_modules/
+        exclude: /node_modules/
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src'),
-      filename: 'index.html',
-      inject: 'body'
+      template: path.resolve(__dirname, 'src/index.html'),
+      inject: 'head'
     })
   ]
 }
